@@ -1,6 +1,5 @@
 package com.myproject.ordertrackingapp.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,16 +13,15 @@ import lombok.*;
 @NoArgsConstructor
 
 @Entity
-public class Customer {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private String customerName;
 
-    private String email;
+    private String status; /// new picked packed , delivered
 
-    private String password;
 
     // private Address
 

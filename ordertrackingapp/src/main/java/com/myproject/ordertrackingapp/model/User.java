@@ -1,6 +1,5 @@
 package com.myproject.ordertrackingapp.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,7 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 
 @Entity
-public class Customer {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +23,8 @@ public class Customer {
     private String email;
 
     private String password;
+
+    private String role;
 
     // private Address
 
