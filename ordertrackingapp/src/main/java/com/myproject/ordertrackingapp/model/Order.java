@@ -1,9 +1,6 @@
 package com.myproject.ordertrackingapp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @ToString
@@ -20,7 +17,10 @@ public class Order {
     private Long id;
     private String customerName;
 
-    private String status; /// new picked packed , delivered
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status; /// new picked packed , delivered
+
+    private Customer customer;
 
 
     // private Address
